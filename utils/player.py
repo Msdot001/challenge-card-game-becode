@@ -1,19 +1,43 @@
-from card import Card
-from random import sample
 
-"""A sett of class that can be used to represent a card"""
+from card import Card
+from random import random
+from random import shuffle
 
 class Player:
-
-    def __init__(self,cards,turn_count,number_of_count,number_of_cards,history):
-        """Initializing the attribute of class Player"""
-        Card.__init__(color, icon, value)
-        self.turn_count = turn_count
-        self.number_of_count = number_of_count
-        self.number_of_cards = number_of_cards
-        self.history = history
-
+    def __init__(self,player_name):
+        self.cards = []
+        self.turn_count = 0
+        self.number_of_cards = 0
+        self.history = []
+        self.player_name = player_name  
 
     def play(self):
-        random.choice(Cards)
+        card = random(self.cards)
+        self.history.append(card)
+        print(f"{self.player_name} {self.turn_count} played: {card.value} {card.icon}")
+        return card
 
+class Deck:
+    """Initializing the attribute of class Deck"""
+    def __init__(self): 
+        self.cards = []
+      
+
+    def fill_deck(self):
+        for icon in range(4):
+            for value in range(13):
+                self.cards.append(Card(icon, value))
+                
+
+    def shuffle(self):
+        shuffle(self.cards)
+
+    def distribute(self,players):
+        self.players = []
+        
+
+total_card = Deck()
+total_card.fill_deck()
+total_card.shuffle()
+for card in total_card.cards:
+    print(card)
