@@ -1,3 +1,4 @@
+
 from player import Player, Deck
 from card import Card
 from random import shuffle,random
@@ -9,7 +10,9 @@ class Board:
         self.history_card =[] 
 
 
+
         #to create name of individual players for the game
+
         name1 = input("player 1 name: ")
         name2 = input("player 2 name: ")
         name3 = input("player 3 name: ")
@@ -36,6 +39,7 @@ class Board:
         self.players.append(Player(name4))
         """
 
+
         #filling the card with deck and distribute one card to each player per turn 
 
         self.deck = Deck()  # object deck from the class Deck
@@ -59,6 +63,7 @@ class Board:
 
                 
                 
+
 
 
 

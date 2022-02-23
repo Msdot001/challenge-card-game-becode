@@ -1,4 +1,5 @@
 
+
 # Creating a class Symbol with two attribute (icon and value)
 
 class Symbol:
@@ -16,14 +17,15 @@ class Symbol:
         return f"{self.color},{self.icon }"                                         #turns list (icon) into a stings
 
 # Creating a class Card that inherits Symbol with additional attribute value
-
 class Card(Symbol):
     """Representing aspects of a Symbol"""
     def __init__(self,icon, value):
+
         super().__init__(icon, color ="")                                           #Inheritance from the Class Symbols
         self.value = value
 
     def __str__(self):                                                             # method used to create a card, by combining the icons and values 
+
            return f"{Card.value[self.value]}{Card.icon[self.icon]}"
 
 

@@ -1,4 +1,5 @@
 
+
 from card import Card                                           # Importation of class Card from card.py inorder to used it in this file
 from random import random
 from random import shuffle
@@ -19,6 +20,7 @@ class Player:
         print(f"{self.player_name} {self.turn_count} played: {card.value} {card.icon}")
         return card
 
+
 #to create the total card(52) which will used during the game
 class Deck:                                                    
     """Initializing the attribute of class Deck"""
@@ -31,6 +33,7 @@ class Deck:
             for value in range(13):
                 self.cards.append(Card(icon, value))
                 
+
 
     def shuffle(self):                                         # shuffle() method ensure that the total card created is randonly shuffle  
         """Shuffles the deck"""
